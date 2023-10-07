@@ -26,7 +26,7 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
             </button>
           </li>
           <li className="option">
-            <a href="#acerca-de-mi" style={{ color: `${modeDark ? "white" : "black"}`}} >Acerca de mi</a>
+            <a href="#acerca-de-mi" style={{ color: `${modeDark ? "white" : "black"}`}} >Sobre mi</a>
             <div className="underline"></div>
           </li>
           <li className="option">
