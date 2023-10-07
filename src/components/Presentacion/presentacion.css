@@ -3,6 +3,7 @@
   width: 100%;
   margin-top: 77px;
   padding: 0 25px;
+  opacity: 0;
 }
 
 .sobre-mi {
@@ -13,6 +14,7 @@
   justify-content: space-between;
   gap: 40px;
   position: relative;
+  overflow: hidden;
 }
 
 @keyframes movimiento {
@@ -53,22 +55,22 @@
 }
 
 .picture-personal {
-  transition: 2s ease;
+  transition: .7s ease;
   opacity: 0;
+  transform: translate(150%);
 }
 
-.picture-personal::after {
+.content-presentation::after {
   width: 20rem;
   height: 20rem;
   bottom: 20%;
-  left: 35%;
-  top: -3%;
+  right: 25%;
+  top: 15%;
   background: rgb(218, 4, 4);
   box-shadow: 12rem 12rem 0 rgb(126, 126, 0);
-  transform: translateX(-200px);
   filter: blur(100px);
   content: "";
-  position: fixed;
+  position: absolute;
   display: block;
   opacity: 0.3;
   border-radius: 50%;

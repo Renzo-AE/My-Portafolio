@@ -3,7 +3,7 @@ import "./presentacion.css"
 
 export const Presentacion = ({ hi }) => {
   return (
-    <div className="content-presentation">
+    <div className={`content-presentation ${!hi&&"return-about"}`}>
       <div className="sobre-mi">
         <section className={`presentation ${!hi&&"return-about"}`}>
           <h1>

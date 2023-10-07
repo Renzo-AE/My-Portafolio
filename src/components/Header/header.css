@@ -9,6 +9,7 @@ header {
   z-index: 10;
   backdrop-filter: blur(3px);
   height: 77px;
+  box-shadow: 0px -25px 50px;
 }
 
 .mostrar-header {

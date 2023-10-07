@@ -7,7 +7,7 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
   const [activeHamburguesa, setActiveHamburguesa] = useState(false)
 
   return (
-    <header className={`${!desactiveHi&&"mostrar-header"}`} style={{background: `${modeDark ? "rgba(31, 31, 31, .96)" : "rgba(243, 243, 243, .96)"}`}}>
+    <header className={`${!desactiveHi&&"mostrar-header"}`} style={{background: `${modeDark ? "rgba(31, 31, 31, .50)" : "rgba(243, 243, 243, .96)"}`}}>
       <nav style={{color:`${modeDark ? "white" : "black"}`}}>
         <a href="#" className="logo" >Renzo AE</a>
         <ul>
@@ -30,7 +30,7 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
             <div className="underline"></div>
           </li>
           <li className="option">
-            <a href="#" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
+            <a href="#proyectos" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
             <div className="underline"></div>
           </li>
         </ul>
@@ -49,7 +49,7 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
             </li>
             <li className="">
               <div className="underline"></div>
-              <a href="#" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
+              <a href="#proyectos" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
             </li>
           </ul>
         </div>
