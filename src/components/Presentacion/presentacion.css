@@ -1,0 +1,152 @@
+.content-presentation{
+  position: relative;
+  width: 100%;
+  margin-top: 77px;
+  padding: 0 25px;
+}
+
+.sobre-mi {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  position: relative;
+}
+
+@keyframes movimiento {
+  50% {
+    transform: translate(0, 6.5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.presentation {
+  transition: 0.7s ease;
+  transform: translate(-150%);
+  opacity: 0;
+  margin-top: 20px;
+}
+
+.presentation h1{
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  animation-name: movimiento;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  line-height: .9;
+}
+
+.presentation span {
+  font-family: 'Pixelify Sans', cursive;
+  background: linear-gradient(45deg, #ff0000, #ffee00); /* Gradiente lineal */
+  -webkit-background-clip: text; /* Aplicar el clip al texto */
+  color: transparent; /* Hacer el texto transparente */
+}
+
+.presentation p{
+  font-size: 1.4rem;
+}
+
+.picture-personal {
+  transition: 2s ease;
+  opacity: 0;
+}
+
+.picture-personal::after {
+  width: 20rem;
+  height: 20rem;
+  bottom: 20%;
+  left: 35%;
+  top: -3%;
+  background: rgb(218, 4, 4);
+  box-shadow: 12rem 12rem 0 rgb(126, 126, 0);
+  transform: translateX(-200px);
+  filter: blur(100px);
+  content: "";
+  position: fixed;
+  display: block;
+  opacity: 0.3;
+  border-radius: 50%;
+  z-index: -1;
+  scale: 1.2;
+
+  animation-name: crecimiento;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes crecimiento {
+  0% {
+    scale: 1.1;
+  }
+
+  50% {
+    scale: 1.25;
+  }
+
+  100% {
+    scale: 1.1;
+  }
+}
+
+.picture-personal img {
+  width: 250px;
+}
+
+.return-about {
+  transform: translate(0);
+  opacity: 1;
+  display: block;
+}
+
+/*---------------- TABLE ---------------*/
+@media (min-width: 770px){
+  .content-presentation{
+    height: calc( 100% - 77px);
+    min-height: 500px;
+    top: 77px;
+    margin-top: 0;
+    position: absolute;
+  }
+
+  .sobre-mi {
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 100px;
+  }
+
+  .presentation h1{
+    font-size: 4.5rem;
+  }
+
+  .presentation {
+    margin-top: 0px;
+  }
+
+  .presentation p{
+    font-size: 1.7rem;
+  }
+
+  .picture-personal img {
+    width: 300px;
+  }
+}
+
+/*---------------- DESKTOP ---------------*/
+@media (min-width: 990px){
+  .picture-personal img {
+    width: 350px;
+  }
+
+  .content-presentation{
+    min-height: 600px;
+  }
+}
+
