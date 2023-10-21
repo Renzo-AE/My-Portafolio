@@ -115,7 +115,7 @@ nav ul li:first-child{
 }
 
 .modal-nav {
-  border-top: 2px solid white;
+  border-top: 2px solid;
   background-color: rgba(92, 92, 92, .9);
   position: absolute;
   right: 0;

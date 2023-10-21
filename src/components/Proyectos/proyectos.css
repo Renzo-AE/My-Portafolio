@@ -1,6 +1,5 @@
 .content-proyectos {
   width: 100%;
-  border: 1px solid white;
   padding: 0 25px;
   padding-top: 77px;
   margin-top: -37px;
@@ -9,13 +8,169 @@
 .space-proyectos {
   max-width: 1170px;
   margin: auto;
-  border: 1px solid white;
 }
 
 .space-proyectos h1 {
+  overflow-wrap: break-word;
+  width: 100%;
   text-align: center;
   font-size: 60px;
   margin: 40px 0 70px;
+  font-size: 3rem;
+}
+
+.space-proyectos .proyectos {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 10px;
+  row-gap: 50px;
+}
+.space-proyectos .proyectos .project {
+  height: 340px;
+  position: relative;
+}
+
+.space-proyectos .proyectos .project .imagen {
+  padding: 0;
+  overflow: hidden;
+  height: 230px;
+  box-shadow: 0px 4px 20px rgb(119, 119, 119);
+}
+
+.space-proyectos .proyectos .project .imagen img{
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  transition: .3s ease;
+  left: 0;
+}
+
+.space-proyectos .proyectos .project .imagen:hover img {
+  width: 130%;
+  left: -50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.space-proyectos .proyectos .project h2 {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1;
+}
+
+.space-proyectos .proyectos .project .links {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.space-proyectos .proyectos .project .links a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 238, 0, 0.5));
+  width: 100%;
+  border-radius: 15px;
+  padding: 8px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.modal-project {
+  background-color: rgba(92, 92, 92, .9);
+  position: fixed;
+  padding: 0 25px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0;
+}
+
+.active-modal-project {
+  scale: 1;
+  transition: .3s ease;
+}
+
+.modal-project .content {
+  width: 100%;
+  max-width: 1000px;
+  padding: 10px;
+} 
+
+.modal-project .content .modal-info .modal-img-project{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.modal-project .content .modal-info h1 {
+  background: linear-gradient(45deg, rgb(255, 0, 0), rgb(255, 238, 0)); 
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.modal-project .content .modal-info .descripton {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.08;
+}
+
+.modal-project .content .modal-info .modal-skills {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.modal-project .content .modal-info .modal-skills li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.modal-project .content .modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.modal-project .content .modal-buttons a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 238, 0, 0.5));
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.modal-project .close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.modal-project .close svg {
+  width: 30px;
 }
 
 /*---------------- TABLE ---------------*/
@@ -24,16 +179,51 @@
     margin-top: 0;
   }
 
-  .space-proyectos {
-    
+  .space-proyectos .proyectos {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+    row-gap: 100px;
   }
 
   .space-proyectos h1 {
     font-size: 75px;
   }
+
+  .modal-project .content .modal-info {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .modal-project .content .modal-info .modal-img-project{
+    width: 600px;
+    height: 400px;
+  }
+
+  .modal-project .content .modal-info h1 {
+    font-size: 3rem;
+  }
+
+  .modal-project .content .modal-info .descripton {
+    font-size: 1.2rem;
+  }
+
+  .modal-project .close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .modal-project .close svg {
+    width: 40px;
+  }
 }
 
 /*---------------- DESKTOP ---------------*/
 @media (min-width: 990px){
-
+  .space-proyectos .proyectos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
 }

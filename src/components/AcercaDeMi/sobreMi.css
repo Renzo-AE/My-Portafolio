@@ -77,6 +77,11 @@
   margin-bottom: 5px;
 }
 
+.correo p {
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
 .phone {
   display: flex;
   align-items: center;

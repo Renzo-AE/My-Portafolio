@@ -38,8 +38,7 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
       <div 
         className={`modal-nav ${activeHamburguesa&&"active-menu-nav"}`} 
         id="modal-nav" 
-        onClick={(event) => event.target.id == "modal-nav" && setActiveHamburguesa(false)} 
-        style={{color:`${modeDark ? "white" : "black"}`, borderTop:`2px solid ${modeDark ? "white" : "black"}`}}
+        onClick={(event) => event.target.id == "modal-nav" && setActiveHamburguesa(false)}
       >
         <div className="contenedor" style={{background: `${modeDark ? "rgba(31, 31, 31, .96)" : "rgba(243, 243, 243, .96)"}`}}>
           <ul>
