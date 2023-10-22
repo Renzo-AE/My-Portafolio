@@ -4,6 +4,7 @@ import './App.css'
 import { Presentacion } from './components/Presentacion/Index'
 import { AcercaDeMi } from './components/AcercaDeMi/Index'
 import { Proyectos } from './components/Proyectos/Index'
+import { Formulario } from './components/Formulario/Index'
 
 function App() {
   const [hi, setHi] = useState(true)
@@ -33,6 +34,7 @@ function App() {
       <div className={`content-portafolio ${hi&&"position-fixed"}`}>
         <AcercaDeMi modeDark={modeDark} />
         <Proyectos modeDark={modeDark} />
+        <Formulario />
       </div>
 
     </div>

@@ -143,6 +143,10 @@
 
 /*---------------- DESKTOP ---------------*/
 @media (min-width: 990px){
+  .presentation h1{
+    font-size: 8.5rem;
+  }
+
   .picture-personal img {
     width: 350px;
   }

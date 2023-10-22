@@ -6,10 +6,12 @@ import "./header.css"
 export const Header = ({ modeDark, onclick, desactiveHi }) => {
   const [activeHamburguesa, setActiveHamburguesa] = useState(false)
 
+  const optionsNav = [['Acerca de mi', 'acerca-de-mi'], ['Proyectos', "proyectos"], ['Contactame', 'contacto']]
+
   return (
     <header className={`${!desactiveHi&&"mostrar-header"}`} style={{background: `${modeDark ? "rgba(31, 31, 31, .50)" : "rgba(243, 243, 243, .96)"}`}}>
       <nav style={{color:`${modeDark ? "white" : "black"}`}}>
-        <a href="#" className="logo" >Renzo AE</a>
+        <a href="#" className="logo" onClick={() => setActiveHamburguesa(false)}>Renzo AE</a>
         <ul>
           <li onClick={onclick}>
             {
@@ -25,14 +27,14 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
               <div style={{ background: `${modeDark ? "white" : "black"}`}}></div>
             </button>
           </li>
-          <li className="option">
-            <a href="#acerca-de-mi" style={{ color: `${modeDark ? "white" : "black"}`}} >Acerca de mi</a>
-            <div className="underline"></div>
-          </li>
-          <li className="option">
-            <a href="#proyectos" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
-            <div className="underline"></div>
-          </li>
+          {
+            optionsNav.map ((option, index) => 
+              <li className="option" key={index}>
+                <a href={`#${option[1]}`} style={{ color: `${modeDark ? "white" : "black"}`}} >{option[0]}</a>
+                <div className="underline"></div>
+              </li>
+            )
+          }
         </ul>
       </nav>
       <div 
@@ -42,14 +44,14 @@ export const Header = ({ modeDark, onclick, desactiveHi }) => {
       >
         <div className="contenedor" style={{background: `${modeDark ? "rgba(31, 31, 31, .96)" : "rgba(243, 243, 243, .96)"}`}}>
           <ul>
-            <li className="">
-              <div className="underline"></div>
-              <a href="#acerca-de-mi" style={{ color: `${modeDark ? "white" : "black"}`}} >Acerca de mi</a>
-            </li>
-            <li className="">
-              <div className="underline"></div>
-              <a href="#proyectos" style={{ color: `${modeDark ? "white" : "black"}` }} >Proyectos</a>
-            </li>
+            {
+              optionsNav.map ((option, index) => 
+                <li className="option" key={index} onClick={() => setActiveHamburguesa(false)}>
+                  <div className="underline"></div>
+                  <a href={`#${option[1]}`} style={{ color: `${modeDark ? "white" : "black"}`}} >{option[0]}</a>
+                </li>
+              )
+            }
           </ul>
         </div>
       </div>

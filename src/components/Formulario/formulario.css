@@ -1,53 +1,79 @@
+.contacto{
+  padding-top: 150px;
+}
+
 .form {
-  padding: 50px 55px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-  border-radius: 20px;
+  background-color: black;
   text-align: center;
   width: 340px;
+  width: 100%;
+  padding: 60px 25px 50px;
 }
 
 .input-group {
+  max-width: 600px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
 .form h2 {
-  color: #283629;
-  font-size: 35px;
+  color: white;
+  margin-bottom: 70px;
+  font-size: 3rem;
+  overflow-wrap: break-word;
+  line-height: .8;
 }
 
 .form label {
-  color: #283629;
-  font-size: 15px;
+  color: rgb(233, 233, 233);
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
 }
 
 .form input, textarea {
-  padding: 17px 25px;
+  padding: 14px 25px;
   border-radius: 25px;
   margin-bottom: 20px;
-  background-color: #EDFFF0;
+  background-color: #fff4ed;
   border: 2px solid #F0FAF1;
   color: #283629;
   outline: none;
+  font-size: 1rem;
 }
 
 .form input::placeholder, textarea::placeholder {
-  color: #b5cab6;
+  color: #cac1b5;
 }
 
 .btn-form {
   font-size: 16px;
   color: #FFFFFF;
   border: 0;
-  border-radius: 25px;
-  background-color: #51d94c;
-  box-shadow: 0 0 20px rgba(25, 254, 0, .4);
+  border-radius: 15px;
+  background-color: #ee8610;
   cursor: pointer;
+  padding: 15px 0px;
 }
 
 .btn-form:hover {
-  background-color: #50E04B;
+  background-color: #ee7b10;
+}
+
+/*---------------- TABLE ---------------*/
+@media (min-width: 770px){
+  .form {
+    padding-top: 80px;
+  }
+
+  .form h2 {
+    font-size: 75px;
+  }
+}
+
+/*---------------- TABLE ---------------*/
+@media (min-width: 990px){
+
 }

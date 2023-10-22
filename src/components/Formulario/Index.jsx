@@ -2,38 +2,47 @@ import "./formulario.css"
 
 export const Formulario = () => {
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
 
-    const form = new FormData(document.querySelector(`.${event.target.className}`))
+    const $form = event.target
+    const form = new FormData($form)
 
-    console.log(form.get('name'))
-  };
+    const response = await fetch($form.action, {
+                                                  method: $form.method,
+                                                  body: form,
+                                                  headers: {
+                                                    'Accept': 'aplication/json'
+                                                  }
+                                                })
+
+    if (response.ok) {
+      $form.reset()
+      alert("se envio correctamente el mensaje")
+    }
+  }
 
   return (
-    <form action="" method="POST" onSubmit={handleSubmit} className="form">
-      <h2>Contacto</h2>
-      <div className="input-group">
-        <label htmlFor="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Nombre" />
+    <div className="contacto" id="contacto">
+      <form onSubmit={handleSubmit} action="https://formspree.io/f/maygvney" method="POST" id="form" className="form">
+        <h2>Contactame</h2>
+        <div className="input-group">
+          <label htmlFor="name">Nombre</label>
+          <input type="text" name="name" id="name" placeholder="Nombre" />
 
-        <label htmlFor="phone">Nombre</label>
-        <input type="text" name="phone" id="phone" placeholder="Telefono" />
+          <label htmlFor="phone">Número</label>
+          <input type="text" name="phone" id="phone" placeholder="Telefono" />
 
-        <label htmlFor="email">Nombre</label>
-        <input type="text" name="email" id="email" placeholder="Email" />
+          <label htmlFor="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Email" />
 
-        <label htmlFor="message">Nombre</label>
-        <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
-      
-        <input className="btn-form" type="submit" value="Enviar" />
+          <label htmlFor="message">Mensaje</label>
+          <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
 
-        <input type="hidden" name="_next" value="http://localhost:5173/" />
-        <input type="hidden" name="_captcha" value="false" />
+          <button className="btn-form" type="submit">Enviar</button>
 
-      </div>
-
-      <a href="mailto:me@renzo.com"> hi </a>
-    </form>
+        </div>
+      </form>
+    </div>
   )
 }

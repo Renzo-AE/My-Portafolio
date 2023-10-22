@@ -81,8 +81,8 @@ export const AcercaDeMi = ({ modeDark }) => {
                   </div>  
                 </div>
                 <div className="btns-contact">
-                  <a href="#" style={{ color: `${modeDark ? "white" : "black"}`}}>Ver mi CV</a>
-                  <a href="#" style={{ color: `${modeDark ? "white" : "black"}`}}>Enviame un mensaje</a>
+                  <a href="https://drive.google.com/file/d/1jvykxISSXc-fJAulhAX64Fis_mpZyqjy/view?usp=sharing" target="blank" rel="noopener noreferrer" style={{ color: `${modeDark ? "white" : "black"}`}}>Ver mi CV</a>
+                  <a href="#contacto" style={{ color: `${modeDark ? "white" : "black"}`}}>Enviame un mensaje</a>
                 </div>
               </div>
             </section>
