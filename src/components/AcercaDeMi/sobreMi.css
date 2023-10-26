@@ -15,7 +15,7 @@
 
 .sobre-mii h1 {
   text-align: center;
-  font-size: 60px;
+  font-size: 3rem;
   margin: 40px 0 70px;
 }
 
@@ -28,7 +28,7 @@
 .quien-soy {
   width: 100%;
   border-bottom: 1px solid;
-  padding: 40px 40px 20px;
+  padding: 40px 30px 20px;
 }
 
 .quien-soy h2 {
@@ -119,6 +119,7 @@
   border: none;
   background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 238, 0, 0.5));
   width: 80%;
+  min-width: 200px;
   max-width: 230px;
   padding: 10px 0;
   font-size: 1.2rem;
@@ -139,7 +140,7 @@
 .skills {
   border-top: 1px solid;
   width: 100%;
-  padding: 40px 40px 20px;
+  padding: 40px 30px 20px;
 }
 
 .skills h2 {
@@ -197,11 +198,15 @@
   .quien-soy {
     border-right: 1px solid;
     border-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .skills {
     border-left: 1px solid;
     border-top: 0;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 

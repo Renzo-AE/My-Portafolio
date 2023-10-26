@@ -5,9 +5,12 @@ export const Formulario = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
 
+    document.querySelector(".btn-form").innerHTML = `Enviando<span class="punto-1">.</span><span class="punto-2">.</span><span class="punto-3">.</span>`
+    document.querySelector(".btn-form").disabled = true;
+
     const $form = event.target
     const form = new FormData($form)
-
+    
     const response = await fetch($form.action, {
                                                   method: $form.method,
                                                   body: form,
@@ -15,10 +18,17 @@ export const Formulario = () => {
                                                     'Accept': 'aplication/json'
                                                   }
                                                 })
-
+    
+    console.log(response)
+                                                
     if (response.ok) {
       $form.reset()
+      document.querySelector(".btn-form").innerText = "Enviar"
+      document.querySelector(".btn-form").disabled = false;
       alert("se envio correctamente el mensaje")
+    } else {
+      document.querySelector(".btn-form").innerText = "Enviar"
+      document.querySelector(".btn-form").disabled = false;
     }
   }
 

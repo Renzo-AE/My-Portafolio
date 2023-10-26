@@ -17,8 +17,8 @@ export const projects = [
         nameLogo: "css"
       }
     ],
-    respository: "",
-    linkPage: "",
+    respository: "https://github.com/Renzo-AE/carrito-de-compra",
+    linkPage: "https://carrito-de-compra.vercel.app/",
   },
   {
     id: 1,
@@ -42,8 +42,8 @@ export const projects = [
         nameLogo: "bootstrap"
       }
     ],
-    respository: "",
-    linkPage: "",
+    respository: "https://github.com/Renzo-AE/table-pokeApi",
+    linkPage: "https://table-poke-api.vercel.app/",
   },
   {
     id: 2 ,

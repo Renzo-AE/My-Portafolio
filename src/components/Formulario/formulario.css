@@ -35,7 +35,7 @@
 
 .form input, textarea {
   padding: 14px 25px;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 20px;
   background-color: #fff4ed;
   border: 2px solid #F0FAF1;
@@ -56,11 +56,85 @@
   background-color: #ee8610;
   cursor: pointer;
   padding: 15px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
 }
 
 .btn-form:hover {
   background-color: #ee7b10;
 }
+
+/*----Animation enviando ------*/
+.btn-form span {
+  font-weight: 800;
+}
+
+.btn-form .punto-1 {
+  animation: infinite 2.5s punto1;
+}
+.btn-form .punto-2 {
+  animation: infinite 2.5s punto2;
+}
+.btn-form .punto-3 {
+  animation: infinite 2.5s punto3;
+}
+
+@keyframes punto1 {
+  0%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes punto2 {
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 0;
+  }
+  30%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes punto3 {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  90%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
 
 /*---------------- TABLE ---------------*/
 @media (min-width: 770px){
