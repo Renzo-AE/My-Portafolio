@@ -36,7 +36,7 @@ export const Proyectos = ({ modeDark }) => {
                 <h2>{project.name}</h2>
                 <div className="links">
                   <a href={project.respository} style={{ color: `${modeDark ? "white" : "black"}`}} target="_blank" rel="noopener noreferrer">Código</a>
-                  <a href="#" style={{ color: `${modeDark ? "white" : "black"}`}}>Ver</a>
+                  <a href={project.linkPage}style={{ color: `${modeDark ? "white" : "black"}`}}>Ver</a>
                 </div>
               </div>
             )
@@ -65,7 +65,7 @@ export const Proyectos = ({ modeDark }) => {
           </div>
           <div className="modal-buttons">
             <a href={dataProjectSelected.respository} style={{ color: `${modeDark ? "white" : "black"}`}} target="_blank" rel="noopener noreferrer">Código</a>
-            <a href="#" style={{ color: `${modeDark ? "white" : "black"}`}}>Ver</a>
+            <a href={dataProjectSelected.linkPage} style={{ color: `${modeDark ? "white" : "black"}`}}>Ver</a>
           </div>
         </div>
         <div 
