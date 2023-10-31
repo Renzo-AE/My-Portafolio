@@ -43,7 +43,7 @@ export const projects = [
       }
     ],
     respository: "https://github.com/Renzo-AE/table-pokeApi",
-    linkPage: "https://table-poke-api.vercel.app/",
+    linkPage: "https://portafolio-renzo-ae.vercel.app/",
   },
   {
     id: 2,
